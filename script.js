@@ -38,7 +38,7 @@ function checkAnswer(proposal,correctAnswer){ //on vérifie maintenant si la pro
     let answer =[]
     for(let i=0; i<proposal.length; i++){
         if(proposal[i] == correctAnswer[i]){
-            console.log(`Color ${proposal[i]} is at the right position.`)
+            console.log(`Color ${proposal[i]} is in the right position.`)
             answer.push('1')
         }
         else if (correctAnswer.includes(proposal[i])){
@@ -88,10 +88,24 @@ function game(proposal, correctAnswer){
 //Pour cette étape je n'ai qu'à modifier mes variables car mes fonctions utilisent déjà des boucles qui parcourent mes tableaux
 //J'ajoute 4 couleurs à ma constante possibleColors
 
-let codemaker2 = ['blue', 'green', 'red', 'pink'] //nouvelle combinaison à deviner
+//let codemaker2 = ['blue', 'green', 'red', 'pink'] //nouvelle combinaison à deviner
 
-let codebreaker5 = ['red', 'blue', 'green', 'test'] //couleur non valide
-let codebreaker6 = ['red', 'blue', 'green', 'purple'] //3 mal placées et une incorrecte
-let codebreaker7 = ['red', 'blue', 'green', 'pink'] //3 mal placées et une bien placée
+//let codebreaker5 = ['red', 'blue', 'green', 'test'] //couleur non valide
+//let codebreaker6 = ['red', 'blue', 'green', 'purple'] //3 mal placées et une incorrecte
+//let codebreaker7 = ['red', 'blue', 'green', 'pink'] //3 mal placées et une bien placée
 
-game(codebreaker6, codemaker2)
+//game(codebreaker6, codemaker2)
+
+
+//ETAPE 3
+
+//Comme pour l'étape 2, mes fonctions restent valables avec plusieurs fois la même couleur
+//J'ai quand même fait quelques tests
+
+let codemaker3 = ['blue', 'blue', 'yellow', 'green']
+
+let codebreaker8 = ['blue', 'yellow', 'pink', 'blue']
+let codebreaker9 = ['blue', 'blue', 'green', 'yellow']
+let codebreaker10 = ['blue', 'blue', 'yellow', 'green']
+
+game(codebreaker10,codemaker3)
