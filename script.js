@@ -4,7 +4,8 @@ let codemaker = ['red','blue'] //combinaison à deviner
 
 let codebreaker = ['blue','red'] //proposition du joueur
 
-const possibleColors = ['blue', 'yellow', 'red', 'green'] //Les 4 choix de couleurs possibles
+const possibleColors = ['blue', 'yellow', 'red', 'green', 'pink', 'purple', 'orange', 'black' ] //Les 4 choix de couleurs possibles pour l'étape 1 + 4 autres pour l'étape 2
+
 
 function checkOptions(proposal){ //ici on vérifie que les propositions faites par le joueur sont bien dans la liste des couleurs possibles
     let allOptions = 0
@@ -79,5 +80,18 @@ function game(proposal, correctAnswer){
 //let codebreaker2 = ['blue','yellow']//couleurs valides, une mal placée et l'autre incorrecte (étape 1)
 //let codebreaker3 = ['blue', 'red'] //les deux couleurs sont correctes mais mal placées (étape 1)
 //let codebreaker4 = ['red','blue'] //bonne réponse (étape 1)
-game(codebreaker4, codemaker)
+//game(codebreaker4, codemaker)
 
+
+// ETAPE 2
+
+//Pour cette étape je n'ai qu'à modifier mes variables car mes fonctions utilisent déjà des boucles qui parcourent mes tableaux
+//J'ajoute 4 couleurs à ma constante possibleColors
+
+let codemaker2 = ['blue', 'green', 'red', 'pink'] //nouvelle combinaison à deviner
+
+let codebreaker5 = ['red', 'blue', 'green', 'test'] //couleur non valide
+let codebreaker6 = ['red', 'blue', 'green', 'purple'] //3 mal placées et une incorrecte
+let codebreaker7 = ['red', 'blue', 'green', 'pink'] //3 mal placées et une bien placée
+
+game(codebreaker6, codemaker2)
