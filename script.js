@@ -102,10 +102,44 @@ function game(proposal, correctAnswer){
 //Comme pour l'étape 2, mes fonctions restent valables avec plusieurs fois la même couleur
 //J'ai quand même fait quelques tests
 
-let codemaker3 = ['blue', 'blue', 'yellow', 'green']
+// let codemaker3 = ['blue', 'blue', 'yellow', 'green']
 
-let codebreaker8 = ['blue', 'yellow', 'pink', 'blue']
-let codebreaker9 = ['blue', 'blue', 'green', 'yellow']
-let codebreaker10 = ['blue', 'blue', 'yellow', 'green']
+// let codebreaker8 = ['blue', 'yellow', 'pink', 'blue']
+// let codebreaker9 = ['blue', 'blue', 'green', 'yellow']
+// let codebreaker10 = ['blue', 'blue', 'yellow', 'green']
 
-game(codebreaker10,codemaker3)
+// game(codebreaker10,codemaker3)
+
+
+//ETAPE 4
+
+function randomIndex(min, max) { //On veut récupérer un chiffre aléatoire pour aller chercher une couleur à un index aléatoire du tableau possibleColors
+    return Math.floor(Math.random() * (max - min));
+  }
+
+//console.log(randomIndex(0,8))
+
+function getRandomCodemaker(){
+    let randomCodemaker = []
+    for (let i =0; i<4; i++){
+        let randomColor = possibleColors[randomIndex(0,8)]
+        randomCodemaker.push(randomColor)
+
+        //console.log(randomColor)
+        //console.log(randomCodemaker)  
+    }
+    return randomCodemaker
+}
+
+//console.log(getRandomCodemaker())
+
+let randomizedCodemaker = getRandomCodemaker()
+console.log(randomizedCodemaker)
+
+//Ma fonction me renvoie bien un codemaker aléatoire, mais comme je n'ai pas ce principe d'interaction utilisateur je dois relancer mon code à chaque fois
+//ce qui me génère un nouveau codemaker. Je ne peux donc pas "jouer" pour le moment
+
+
+// Bilan personnel
+//Beaucoup de choses sont (à mon avis) à améliorer et à optimiser dans chaque étape mais je suis contente de mon travail car tout fonctionne comme je le voulais.
+// Prochain objetcif, faire une interface graphique à poster sur mon github perso pour mon portfolio 
